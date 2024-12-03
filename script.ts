@@ -11,6 +11,7 @@ function maximumWealth(accounts: number[][]): number {
 }
 */
 
+/*
 // 2037. Minimum Number of Moves to Seat Everyone
 // https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/description/
 
@@ -22,4 +23,21 @@ function minMovesToSeat(seats: number[], students: number[]): number {
     (moves, seat, i) => moves + Math.abs(seat - students[i]),
     0
   );
+}
+*/
+
+// 2574. Left and Right Sum Differences
+// https://leetcode.com/problems/left-and-right-sum-differences/description/
+
+function sum(arr: number[]): number {
+  return arr.reduce((sum, cur) => sum + cur, 0);
+}
+
+function leftRightDifference(nums: number[]): number[] {
+  return nums.map((_, i) => {
+    const leftSum = sum(nums.slice(0, i));
+    const rightSum = sum(nums.slice(i + 1));
+
+    return Math.abs(leftSum - rightSum);
+  });
 }
