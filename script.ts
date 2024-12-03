@@ -26,6 +26,7 @@ function minMovesToSeat(seats: number[], students: number[]): number {
 }
 */
 
+/*
 // 2574. Left and Right Sum Differences
 // https://leetcode.com/problems/left-and-right-sum-differences/description/
 
@@ -40,4 +41,16 @@ function leftRightDifference(nums: number[]): number[] {
 
     return Math.abs(leftSum - rightSum);
   });
+}
+*/
+
+// 3285. Find Indices of Stable Mountains
+// https://leetcode.com/problems/find-indices-of-stable-mountains/description/
+
+function stableMountains(height: number[], threshold: number): number[] {
+  return height.reduce((stableMountains: number[], _, i) => {
+    if (height[i - 1] > threshold) return [...stableMountains, i];
+
+    return stableMountains;
+  }, []);
 }
