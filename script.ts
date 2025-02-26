@@ -44,6 +44,7 @@ function leftRightDifference(nums: number[]): number[] {
 }
 */
 
+/*
 // 3285. Find Indices of Stable Mountains
 // https://leetcode.com/problems/find-indices-of-stable-mountains/description/
 
@@ -53,4 +54,12 @@ function stableMountains(height: number[], threshold: number): number[] {
 
     return stableMountains;
   }, []);
+}
+*/
+
+// 9. Palindrome Number
+// https://leetcode.com/problems/palindrome-number/description/
+
+function isPalindrome(x: number): boolean {
+  return `${x}` === `${x}`.split("").reverse().join("");
 }
